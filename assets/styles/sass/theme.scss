@@ -18,6 +18,8 @@
 @import "components/navbar";
 @import "components/roboto";
 @import "components/avenir";
+//@import "components/ptserif";
+
 @import "components/typography";
 @import "components/transitions";
 @import "components/cards";
@@ -58,16 +60,18 @@ body {
 em {
   color: $base-blue;
   font-style: italic;
-  font-family: "pt serif caption"; // TODO: include font family in assets
+  font-family: "PT Serif"; // TODO: include font family in assets
 }
 
 .strike {
   text-decoration: line-through;
 }
 
+
+
 ul.text,
 p {
-  font-family: "pt serif caption"; // TODO: include font family in assets
+  font-family: "PT Serif"; // TODO: include font family in assets
   font-weight: 100;
   line-height: 1.7;
   color: rgba(#404040,.8);
@@ -527,7 +531,7 @@ ul.text {
     em {
       color: $base-blue;
       font-style: italic;
-      font-family: "pt serif caption"; // TODO: include font family in assets
+      font-family: "PT Serif"; // TODO: include font family in assets
       font-weight: 100;
     }
     img {
@@ -864,7 +868,7 @@ ul.text {
       //font-size: 1rem;
     }
     font-style: italic;
-    font-family: "pt serif caption"; // TODO: include font family in assets
+    font-family: "PT Serif"; // TODO: include font family in assets
     border-color: $base-purple;
     text-align: left;
     .highlight {

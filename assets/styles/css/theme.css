@@ -6901,14 +6901,14 @@ body {
 em {
   color: #65ABE0;
   font-style: italic;
-  font-family: "pt serif caption"; }
+  font-family: "PT Serif"; }
 
 .strike {
   text-decoration: line-through; }
 
 ul.text,
 p {
-  font-family: "pt serif caption";
+  font-family: "PT Serif";
   font-weight: 100;
   line-height: 1.7;
   color: rgba(64, 64, 64, 0.8);
@@ -7232,7 +7232,7 @@ ul.text {
   .section h2 em {
     color: #65ABE0;
     font-style: italic;
-    font-family: "pt serif caption";
+    font-family: "PT Serif";
     font-weight: 100; }
   .section h2 img {
     max-height: 2em;
@@ -7450,7 +7450,7 @@ ul.text {
   #testimonial blockquote {
     color: rgba(255, 255, 255, 0.85);
     font-style: italic;
-    font-family: "pt serif caption";
+    font-family: "PT Serif";
     border-color: #5A6B97;
     text-align: left; }
     #testimonial blockquote .highlight {
