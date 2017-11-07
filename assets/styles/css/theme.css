@@ -3282,6 +3282,11 @@ nav {
   src: local(Avenir Black), url("../../fonts/avenir/Avenir-Black-webfont.woff") format("woff");
   font-weight: 900; }
 
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../fonts/ptserif/400.woff") format("woff");
+  font-weight: 400; }
+
 a {
   text-decoration: none; }
 
@@ -6919,8 +6924,6 @@ p {
 
 ul.text {
   margin: 2rem 0; }
-  ul.text li {
-    list-style-type: circle; }
 
 .demo .browser {
   background: #ddd;
