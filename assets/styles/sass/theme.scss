@@ -55,19 +55,6 @@ body {
   background: lighten(rgba($base-yellow,.5),5%);
   color: rgba(#404040,.9);
 }
-
-em {
-  color: $base-blue;
-  font-style: italic;
-  font-family: "PT Serif", serif; // TODO: include font family in assets
-}
-
-.strike {
-  text-decoration: line-through;
-}
-
-
-
 ul.text,
 p {
   font-family: "PT Serif", serif; // TODO: include font family in assets
@@ -84,6 +71,19 @@ ul.text {
   li {
   }
 }
+
+em {
+  color: $base-blue;
+  font-style: italic;
+  font-family: "PT Serif Italic", serif; // TODO: include font family in assets
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+
+
 
 .demo {
   $border-radius: 8px;
@@ -528,7 +528,7 @@ ul.text {
     em {
       color: $base-blue;
       font-style: italic;
-      font-family: "PT Serif", serif; // TODO: include font family in assets
+      font-family: "PT Serif Italic", serif; // TODO: include font family in assets
       font-weight: 100;
     }
     img {
@@ -864,7 +864,7 @@ ul.text {
     @media #{$medium-and-up}{
       //font-size: 1rem;
     }
-    font-style: italic;
+    //font-style: italic;
     font-family: "PT Serif", serif; // TODO: include font family in assets
     border-color: $base-purple;
     text-align: left;

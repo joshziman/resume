@@ -3284,8 +3284,13 @@ nav {
 
 @font-face {
   font-family: "PT Serif";
-  src: url("../../fonts/ptserif/pt-serif-regular.woff") format("woff"), url("../../fonts/ptserif/pt-serif-italic.woff") format("woff");
+  src: url("../../fonts/ptserif/pt-serif-regular.woff") format("woff");
   font-weight: 400; }
+
+@font-face {
+  font-family: "PT Serif Italic";
+  src: url("../../fonts/ptserif/pt-serif-italic.woff") format("woff");
+  font-style: italic; }
 
 a {
   text-decoration: none; }
@@ -6903,14 +6908,6 @@ body {
   background: rgba(243, 193, 135, 0.5);
   color: rgba(64, 64, 64, 0.9); }
 
-em {
-  color: #65ABE0;
-  font-style: italic;
-  font-family: "PT Serif", serif; }
-
-.strike {
-  text-decoration: line-through; }
-
 ul.text,
 p {
   font-family: "PT Serif", serif;
@@ -6924,6 +6921,14 @@ p {
 
 ul.text {
   margin: 2rem 0; }
+
+em {
+  color: #65ABE0;
+  font-style: italic;
+  font-family: "PT Serif Italic", serif; }
+
+.strike {
+  text-decoration: line-through; }
 
 .demo .browser {
   background: #ddd;
@@ -7235,7 +7240,7 @@ ul.text {
   .section h2 em {
     color: #65ABE0;
     font-style: italic;
-    font-family: "PT Serif", serif;
+    font-family: "PT Serif Italic", serif;
     font-weight: 100; }
   .section h2 img {
     max-height: 2em;
@@ -7452,7 +7457,6 @@ ul.text {
   background: linear-gradient(30deg, #5A6B97, #65ABE0); }
   #testimonial blockquote {
     color: rgba(255, 255, 255, 0.85);
-    font-style: italic;
     font-family: "PT Serif", serif;
     border-color: #5A6B97;
     text-align: left; }
