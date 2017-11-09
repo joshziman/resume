@@ -7262,49 +7262,66 @@ em {
     color: white; }
 
 .section.light, .page-footer .section.footer-copyright {
-  padding: 4rem 0;
-  text-align: center; }
+  padding: 4rem 0; }
   @media only screen and (max-width: 600px) {
     .section.light h2 img, .page-footer .section.footer-copyright h2 img {
-      margin: 2rem auto 0;
-      display: block; } }
+      max-height: 1.9rem; } }
   @media only screen and (min-width: 601px) {
     .section.light, .page-footer .section.footer-copyright {
       text-align: left; }
       .section.light h2 img, .page-footer .section.footer-copyright h2 img {
         max-height: 56px; } }
 
-#experience {
-  text-align: center; }
-  #experience .flags {
-    margin-top: 2rem; }
-  #experience .flags img {
-    max-width: 48px;
-    margin: 0 12px 0 0; }
-  @media only screen and (max-width: 600px) {
-    #experience h2 img {
-      margin: 2rem auto 0;
-      display: block; }
-    #experience .flags img {
-      margin: 0 4px;
-      max-width: 36px; } }
-  @media only screen and (min-width: 601px) {
-    #experience {
-      text-align: left; }
-      #experience h2 img {
-        max-height: 56px; } }
+#experience ul.text {
+  background: white;
+  padding: 0rem;
+  border-radius: 6px;
+  padding: .5rem; }
+  @media only screen and (min-width: 993px) {
+    #experience ul.text {
+      margin-top: 0; } }
+  #experience ul.text .date {
+    display: block;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "avenir", sans-serif;
+    font-size: .7rem;
+    color: #65ABE0; }
+  #experience ul.text li {
+    margin: 0 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee; }
+    #experience ul.text li:last-of-type {
+      border: 0; }
 
-#skills {
-  text-align: center; }
-  @media only screen and (max-width: 600px) {
+#experience .flags {
+  margin-top: 2rem; }
+
+#experience .flags img {
+  max-width: 48px;
+  margin: 0 12px 0 0; }
+
+@media only screen and (max-width: 600px) {
+  #experience .flags img {
+    margin: 0 4px;
+    max-width: 36px; } }
+
+@media only screen and (min-width: 601px) {
+  #experience {
+    text-align: left; }
+    #experience h2 img {
+      max-height: 56px; } }
+
+@media only screen and (max-width: 600px) {
+  #skills h2 img {
+    max-height: 2.5rem; } }
+
+@media only screen and (min-width: 601px) {
+  #skills {
+    text-align: left; }
     #skills h2 img {
-      margin: 2rem auto 0;
-      display: block; } }
-  @media only screen and (min-width: 601px) {
-    #skills {
-      text-align: left; }
-      #skills h2 img {
-        max-height: 56px; } }
+      max-height: 56px; } }
 
 #accomplishment {
   background: linear-gradient(30deg, #5A6B97, #65ABE0); }
@@ -7331,23 +7348,40 @@ em {
     padding: .3rem .3rem; }
 
 #range {
-  background: linear-gradient(30deg, #de291c, #cd7714, #337d4c, #216ca4); }
+  background: linear-gradient(30deg, #ED7B73, #F1B570, #6DC38A, #65ABE0); }
+  #range h4 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
+    -webkit-font-smoothing: antialiased; }
+  #range .text {
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .7rem;
+    -webkit-font-smoothing: antialiased; }
+    #range .text strong {
+      color: white;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1rem; }
   @media only screen and (max-width: 600px) {
-    #range h4 {
-      text-align: center;
-      color: rgba(255, 255, 255, 0.5); }
     #range ul {
-      padding: 40px; }
+      padding: 24px; }
       #range ul li {
         display: flex;
-        margin: 20px 0; }
+        margin: 24px 0; }
       #range ul .text {
-        margin-left: 12px; }
+        margin-left: 12px;
+        font-size: .8rem; }
         #range ul .text strong {
-          display: block; }
+          display: block;
+          margin-bottom: .25rem;
+          font-weight: 900; }
         #range ul .text span {
-          opacity: .5;
-          font-size: .85rem; }
+          display: block;
+          margin-bottom: 1rem; }
       #range ul .connector {
         display: none; }
       #range ul .dot {
@@ -7362,7 +7396,7 @@ em {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
+        border: 3px solid white;
         flex-shrink: 0;
         display: none; }
         #range ul .dot.foundation {
@@ -7378,20 +7412,15 @@ em {
       overflow-x: scroll;
       padding: 100px 0;
       font-size: 17px; }
-      #range h4 {
-        color: white;
-        text-align: center;
-        font-weight: 100;
-        opacity: .5; }
       #range .line {
-        border-bottom: 3px solid rgba(255, 255, 255, 0.15);
-        transform: translate(0, -240px);
+        border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+        transform: translate(0, -236px);
         z-index: 0; }
       #range ul {
         margin: 0;
         display: flex;
         justify-content: space-around;
-        height: 480px;
+        height: 472px;
         padding: 0 200px; }
         #range ul li {
           margin-left: -80px;
@@ -7411,8 +7440,8 @@ em {
           #range ul li .dot {
             z-index: 1;
             content: '';
-            height: 40px;
-            width: 40px;
+            height: 32px;
+            width: 32px;
             background: #6DC38A;
             display: block;
             border-radius: 100px;
@@ -7420,7 +7449,8 @@ em {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1); }
+            box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+            border: 3px solid white; }
             #range ul li .dot.foundation {
               background: #65ABE0; }
             #range ul li .dot.iterations {
@@ -7432,26 +7462,20 @@ em {
           #range ul li .connector {
             display: block;
             height: 40px;
-            opacity: .15;
-            border-left: 2px dotted white; }
+            border-left: 3px solid rgba(0, 0, 0, 0.1); }
           #range ul li .text {
-            color: rgba(255, 255, 255, 0.85);
             height: 180px;
             width: 200px;
             display: flex;
             flex-direction: column; }
-            #range ul li .text .desc {
-              padding: .75em 0; }
             #range ul li .text strong {
-              color: white;
-              line-height: 3em;
+              line-height: 2.5rem;
               border-radius: 4px;
-              background: rgba(0, 0, 0, 0.25);
+              background: rgba(0, 0, 0, 0.4);
               text-align: center;
-              font-weight: 600;
-              text-transform: uppercase;
-              letter-spacing: .05em;
-              font-size: 90%; } }
+              font-size: .7rem; }
+            #range ul li .text .desc {
+              padding: .75em 0; } }
 
 #testimonial {
   background: linear-gradient(30deg, #5A6B97, #65ABE0); }
@@ -7466,7 +7490,12 @@ em {
     color: rgba(255, 255, 255, 0.65);
     margin: 30px;
     text-align: center;
-    font-size: 90%; }
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "avenir", sans-serif;
+    font-size: .75rem;
+    -webkit-font-smoothing: antialiased; }
   #testimonial p {
     font-style: italic; }
 
@@ -7483,17 +7512,19 @@ em {
   line-height: 1.4; }
 
 @media only screen and (max-width: 600px) {
-  #about > .container > .row {
-    display: flex;
-    flex-direction: column; }
-  #about .has-headshot {
-    order: -1; }
-  #about .has-header h4 {
-    display: none; }
-  #about .has-details {
-    text-align: left; }
-  #about ul.text li {
-    list-style: none; } }
+  #about {
+    text-align: center; }
+    #about > .container > .row {
+      display: flex;
+      flex-direction: column; }
+    #about .has-headshot {
+      order: -1; }
+    #about .has-header h4 {
+      display: none; }
+    #about .has-details {
+      text-align: left; }
+    #about ul.text li {
+      list-style: none; } }
 
 @media only screen and (min-width: 601px) {
   #about .has-headshot {
