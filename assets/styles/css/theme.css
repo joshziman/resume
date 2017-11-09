@@ -3284,7 +3284,7 @@ nav {
 
 @font-face {
   font-family: "PT Serif";
-  src: url("../../fonts/ptserif/pt-serif-regular.woff") format("woff");
+  src: url("../../fonts/ptserif/pt-serif-regular.woff") format("woff"), url("../../fonts/ptserif/pt-serif-italic.woff") format("woff");
   font-weight: 400; }
 
 a {

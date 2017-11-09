@@ -1,6 +1,7 @@
 @font-face {
   font-family: "PT Serif";
   src:
-      url("#{$ptserif-font-path}pt-serif-regular.woff") format("woff");
+      url("#{$ptserif-font-path}pt-serif-regular.woff") format("woff"),
+      url("#{$ptserif-font-path}pt-serif-italic.woff") format("woff");
   font-weight: 400;
 }
