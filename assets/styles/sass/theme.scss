@@ -59,7 +59,7 @@ body {
 em {
   color: $base-blue;
   font-style: italic;
-  font-family: "PT Serif"; // TODO: include font family in assets
+  font-family: "PT Serif", serif; // TODO: include font family in assets
 }
 
 .strike {
@@ -70,7 +70,7 @@ em {
 
 ul.text,
 p {
-  font-family: "PT Serif"; // TODO: include font family in assets
+  font-family: "PT Serif", serif; // TODO: include font family in assets
   font-weight: 100;
   line-height: 1.7;
   color: rgba(#404040,.8);
@@ -528,7 +528,7 @@ ul.text {
     em {
       color: $base-blue;
       font-style: italic;
-      font-family: "PT Serif"; // TODO: include font family in assets
+      font-family: "PT Serif", serif; // TODO: include font family in assets
       font-weight: 100;
     }
     img {
@@ -865,7 +865,7 @@ ul.text {
       //font-size: 1rem;
     }
     font-style: italic;
-    font-family: "PT Serif"; // TODO: include font family in assets
+    font-family: "PT Serif", serif; // TODO: include font family in assets
     border-color: $base-purple;
     text-align: left;
     .highlight {
