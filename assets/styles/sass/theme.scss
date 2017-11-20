@@ -48,6 +48,7 @@
 body {
   background: #eee;
   color: #404040;
+  -webkit-font-smoothing: antialiased;
 }
 
 .highlight {
@@ -64,7 +65,7 @@ p {
   margin-top: 0;
   //max-width: 600px;
   &.value-prop {
-    max-width: 600px;
+    //max-width: 700px;
   }
 }
 ul.text {
@@ -175,7 +176,7 @@ em {
 
 .navbar {
   nav {
-    @extend .z-depth-0;
+    box-shadow:  0 16px 24px 2px rgba(0, 0, 0, 0.035), 0 6px 30px 5px rgba(0, 0, 0, 0.03), 0 8px 10px -5px rgba(0, 0, 0, 0.075);
   }
   ul .btn,
   ul a {
@@ -237,6 +238,7 @@ em {
   }
 
   nav {
+    @extend .z-depth-0;
     z-index: 11;
     position: relative;
     background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
@@ -341,6 +343,8 @@ em {
 #navbar-scroll {
   &.navbar-fixed {
     z-index: 10 ;
+    box-shadow:  0 16px 24px 2px rgba(0, 0, 0, 0.035), 0 6px 30px 5px rgba(0, 0, 0, 0.03), 0 8px 10px -5px rgba(0, 0, 0, 0.075);
+
     margin-bottom: -56px;
     @media #{$medium-and-up} {
       margin-bottom: -90px;
@@ -351,11 +355,7 @@ em {
     z-index: 10;
   }
   .btn {
-    //background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
-    //color: white !important;
-    //text-transform: none;
-    background: linear-gradient(30deg, darken($base-red,15%), darken($base-yellow, 15%), darken($base-green, 15%), darken($base-blue, 15%));
-
+    background: linear-gradient(30deg, darken($base-red, 2%), darken($base-yellow, 2%), darken($base-green, 2%), darken($base-blue, 2%));
   }
   nav .brand {
     font-weight: 100;
@@ -495,6 +495,11 @@ em {
 
 .section {
 
+  padding: 3rem 0;
+  @media #{$medium-and-up}{
+    padding: 4rem 0;
+  }
+
   &:target::before {
     display: block;
     content: " ";
@@ -541,7 +546,7 @@ em {
     color: $base-red;
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: .2em;
+    letter-spacing: .1rem;
     &.alt {
       color: $base-blue;
     }
@@ -558,7 +563,6 @@ em {
 
 }
 .section.light {
-  padding: 4rem 0;
   //text-align: center;
   @media #{$small-and-down}{
     h2 img {
@@ -575,20 +579,68 @@ em {
   }
 }
 
-#experience {
+#previous-works {
 
-  .has-value-prop {
+  h4.init {
+    margin-bottom: 1rem;
+  }
 
+  ul, .card {
+    h4 {
+      margin: .5rem 0 0 0;
+    }
 
   }
-  ul.text {
+  h2 {
+    margin-bottom: 1.25rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+  }
+  p.alt {
+    margin-bottom: .5rem;
+    line-height: 1.5;
+  }
+  .card {
+    border-radius: 5px;
+    box-shadow:  0 16px 24px 2px rgba(0, 0, 0, 0.035), 0 6px 30px 5px rgba(0, 0, 0, 0.03), 0 8px 10px -5px rgba(0, 0, 0, 0.075);
+  }
+  .demo .browser{
+    border-radius: 5px;
+    min-height: 0;
+    .top {
+    }
+  }
+  .card .card-image img {
+    border-radius: 0;
+  }
+
+
+
+  ul.work-history {
     background: white;
     padding: 0rem;
     border-radius: 6px;
-    //margin-top: 0;
-    padding: .5rem;
-    @media #{$large-and-up}{
-      margin-top: 0;
+    .org {
+      line-height: 2.5;
+      display: block;
+    }
+    .alt {
+      font-family: "PT Serif Italic", serif; // TODO: include font family in assets
+      opacity: .7;
+      display: block;
+      line-height: 1.4;
+    }
+    a, .no-link {
+      padding: 1.25rem;
+      display: block;
+    }
+    a {
+      background: lighten(rgba($base-yellow,.6),0%);
+      color: rgba(#404040,.9);
+      &:hover {
+        background: lighten(rgba($base-yellow,.5),0%);
+      }
     }
     .date {
       display: block;
@@ -597,20 +649,21 @@ em {
       font-weight: 600;
       font-family: "avenir", sans-serif;
       font-size: .7rem;
-      //opacity: .75;
       color: $base-blue;
     }
     li  {
-      margin: 0 1rem;
-      padding: 1rem 0;
       border-bottom: 1px solid #eee;
-      &:last-of-type {
+      &:last-of-type,
+      &.featured {
         border: 0;
       }
     }
   }
+}
 
 
+
+#experience {
 
   .flags {
     margin-top: 2rem;
@@ -660,8 +713,117 @@ em {
 
 }
 
-#accomplishment {
+
+.jobs {
+  font-size: .85rem;
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  p.alt {
+    font-family: "PT Serif Italic", serif; // TODO: include font family in assets
+    opacity: .7;
+  }
+  h4 {
+    //font-size: .65rem;
+    //color: $base-blue;
+
+  }
+  h2.org {
+    margin: .5rem 0; TODO: apply this to org names only
+  }
+  .card .card-content p,
+  p, ul {
+    margin: 0 0 2rem 0;
+  }
+  .card {
+    box-shadow:  0 16px 24px 2px rgba(0, 0, 0, 0.035), 0 6px 30px 5px rgba(0, 0, 0, 0.03), 0 8px 10px -5px rgba(0, 0, 0, 0.075);
+    border-radius: 5px;
+  }
+}
+
+
+
+
+#jobs-featured {
+  //font-size: .85rem;
+  padding: 0;
+  > .x-container > .row {
+    display: flex;
+    @media #{$medium-and-down}{
+      flex-direction: column;
+    }
+  }
+}
+
+#ote-summary {
+  background: white;
+
+    padding: 3rem 20px;
+    @media #{$medium-and-up}{
+      padding: 3.5rem;
+    }
+
+
+
+  .h4-row {
+    h4 {
+      display: inline-block;
+    }
+    .thing {
+      @extend h4;
+      background: $base-yellow;
+      color: rgba(white,.8) !important;
+      border-radius: 4px;
+      padding: .4rem .8rem;
+      float: right;
+      margin: 0;
+
+    }
+  }
+  ul.text {
+    li {
+      list-style-type: disc;
+      margin-left: 2rem;
+      @media #{$medium-and-up}{
+        margin-left: 4rem;
+      }
+
+    }
+  }
+
+}
+
+#ote-accomplishment {
   background: linear-gradient(30deg, $base-purple, $base-blue);
+
+  padding: 3rem 20px;
+  @media #{$medium-and-up}{
+    padding: 3.5rem;
+  }
+
+
+  color: white;
+  h4 {
+    color: rgba(black,.45);
+  }
+  p {
+    color: white;
+    em {
+      color: rgba(white,.8);
+    }
+  }
+}
+
+
+
+
+
+
+
+#accomplishment-old {
+  //background: linear-gradient(30deg, $base-purple, $base-blue);
   img {
     max-height: 4rem;
     margin-bottom: 1rem;
@@ -731,13 +893,13 @@ em {
     }
 
     ul {
-      padding: 24px;
+      padding: 20px;
       li {
         display: flex;
         margin: 24px 0;
       }
       .text {
-        margin-left: 12px;
+        //margin-left: 12px;
         font-size: .8rem;
         strong {
           display: block;
@@ -945,14 +1107,30 @@ em {
 
 
 #about {
+  background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
+  ul,p {
+    //color: white;
+    color: rgba(64, 64, 64, 0.95);
+    em {
+      color: rgba(64, 64, 64, 0.5);
+    }
+  }
+  h4:not(.alt-mission) {
+    color: white;
+    text-shadow: 2px 2px 0px rgba(black, .1);
+  }
   h2 {
     margin-bottom: 0;
+    em {
+      //color: red;
+      color: white;
+    }
   }
   h3 {
     text-transform: uppercase;
-    letter-spacing: .06rem;
-    font-size: 70%;
-    opacity: .4;
+    letter-spacing: .1rem;
+    font-size: .75rem;
+    opacity: .55;
     margin: .3rem 0 0;
     font-weight: 700;
     line-height: 1.4;
@@ -1000,7 +1178,8 @@ em {
     border-radius: 99em;
     //float: right;
   }
-  h4.alt {
+  h4.alt,
+  h4.alt-mission {
     margin: 1rem 0;
   }
   .has-details {
@@ -1020,13 +1199,15 @@ em {
   }
   .mission {
     margin-top: 3rem;
+    box-shadow:  0 16px 24px 2px rgba(0, 0, 0, 0.035), 0 6px 30px 5px rgba(0, 0, 0, 0.03), 0 8px 10px -5px rgba(0, 0, 0, 0.075);
+
     //margin-bottom: 3rem;
     text-align: center;
     background: white;
-    border-radius: 6px;
+    border-radius: 5px;
     padding: 40px 20px 20px;
-    h4.alt {
-      //margin: 1rem 0;
+    h4 {
+      color: $base-blue;
     }
     p {
       max-width: 600px;
@@ -1041,6 +1222,8 @@ em {
 #footer {
   //background: linear-gradient(30deg, darken($base-red,20%), darken($base-yellow, 25%), darken($base-green, 25%), darken($base-blue, 25%));
   background: white;
+  //background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
+
   text-align: center;
   .col {
     display: flex;
