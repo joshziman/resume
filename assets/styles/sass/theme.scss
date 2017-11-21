@@ -51,6 +51,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.waves-effect {
+  transition: .15s ease-out;
+}
+
 .highlight {
   //background: lighten(rgba($base-blue,.5),10%);
   background: lighten(rgba($base-yellow,.5),5%);
@@ -216,7 +220,7 @@ em {
       margin: 0 0 0 1rem;
       @extend .z-depth-0;
       &:hover {
-        @extend .z-depth-2;
+        @extend .z-depth-5;
       }
     }
   }
@@ -356,6 +360,8 @@ em {
   }
   .btn {
     background: linear-gradient(30deg, darken($base-red, 2%), darken($base-yellow, 2%), darken($base-green, 2%), darken($base-blue, 2%));
+    background: linear-gradient(30deg, $base-purple, $base-red, $base-yellow );
+
   }
   nav .brand {
     font-weight: 100;
@@ -448,13 +454,20 @@ em {
     letter-spacing: .1em;
     font-size: 90%;
     font-weight: 500;
+    background: linear-gradient(30deg, $base-purple, $base-red, $base-yellow );
+
     img {
       max-height: 1.5rem;
       vertical-align: text-bottom;
       margin: 0 0 0 .5rem;
     }
+
+    //@extend .z-depth-2;
     &:hover {
+      @extend .z-depth-5;
+      transform: scale(1.008);
     }
+
     ~ a {
       color: #aaa;
       margin: 0 0 0 4.5rem;
@@ -614,7 +627,24 @@ em {
   .card .card-image img {
     border-radius: 0;
   }
+  .card a.btn-floating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(30deg, $base-purple, $base-red, $base-yellow );
 
+    &:hover {
+      @extend .z-depth-5;
+      transform: scale(1.05);
+    }
+
+    img {
+      color: white;
+      max-width: 50%;
+      //opacity: .5;
+      align-self: center;
+    }
+  }
 
 
   ul.work-history {
@@ -765,7 +795,42 @@ em {
       padding: 3.5rem;
     }
 
+  a.download {
+    letter-spacing: .1rem;
+    height: 80px;
+    line-height: 80px;
+    //margin: 1.5rem 0;
+    padding: 0 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 90%;
+    font-weight: 500;
+    background: linear-gradient(30deg, $base-purple, $base-red, $base-yellow );
+    //@extend .z-depth-2;
+    &:hover {
+      @extend .z-depth-5;
+      transform: scale(1.008);
+    }
 
+    @media #{$small-and-down}{
+      display: block;
+    }
+
+    & ~.alt {
+      letter-spacing: .1rem;
+      font-size: 90%;
+      font-weight: 500;
+      opacity: .5;
+      padding: 0 1rem;
+
+      @media #{$small-and-down}{
+        display: block;
+        text-align: center;
+        padding: .5rem 1rem;
+      }
+
+    }
+  }
 
   .h4-row {
     h4 {
@@ -822,37 +887,7 @@ em {
 
 
 
-#accomplishment-old {
-  //background: linear-gradient(30deg, $base-purple, $base-blue);
-  img {
-    max-height: 4rem;
-    margin-bottom: 1rem;
-  }
-  h4 {
-    color: rgba(black,.5);
-  }
-  h4.alt {
-    font-weight: 300;
-    color: rgba(white,.4);
-    font-size: 85%;
-  }
-  .demo-wrapper {
-    min-height: 200px;
-    order: 1;
-  }
-  p {
-    color: rgba(white,.9);
-    em {
-      color: lighten($base-red,20%);
-    }
-  }
-  .highlight {
-    color: white;
-    background: darken($base-purple,1%);
-    background: darken($base-yellow,10%);
-    padding: .3rem .3rem;
-  }
-}
+
 #range {
 
   background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
@@ -1107,7 +1142,7 @@ em {
 
 
 #about {
-  background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
+  background: linear-gradient(30deg,  $base-red, $base-yellow, $base-green, $base-blue);
   ul,p {
     //color: white;
     color: rgba(64, 64, 64, 0.95);
@@ -1220,11 +1255,30 @@ em {
 }
 
 #footer {
-  //background: linear-gradient(30deg, darken($base-red,20%), darken($base-yellow, 25%), darken($base-green, 25%), darken($base-blue, 25%));
   background: white;
-  //background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
-
   text-align: center;
+
+  .btn {
+    $height: 80px;
+    height: $height;
+    line-height: $height;
+    margin: 1.5rem 0;
+    padding: 0 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 90%;
+    font-weight: 500;
+    background: linear-gradient(30deg,$base-purple, $base-red, $base-yellow );
+    max-width: 400px;
+    margin: 2rem auto;
+    //margin: 2rem 0;
+
+    &:hover {
+      @extend .z-depth-5;
+      transform: scale(1.02);
+    }
+  }
+
   .col {
     display: flex;
     flex-direction: column;
@@ -1232,9 +1286,15 @@ em {
   p {
     margin: 0;
   }
-  .btn {
+
+
+
+
+
+  .x-btn {
     $x: 3px;
     background: linear-gradient(30deg, darken($base-red,15%), darken($base-yellow, 15%), darken($base-green, 15%), darken($base-blue, 15%));
+    background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue );
     padding:$x;
     height: 4rem;
     //min-width: 340px;

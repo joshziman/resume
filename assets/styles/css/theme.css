@@ -1988,7 +1988,7 @@ a {
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
 
-.z-depth-2, .navbar .nav-wrapper ul .btn:hover, .navbar .nav-wrapper ul .btn-large:hover {
+.z-depth-2 {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
 
 .z-depth-3 {
@@ -1997,7 +1997,7 @@ a {
 .z-depth-4, .modal {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3); }
 
-.z-depth-5 {
+.z-depth-5, .navbar .nav-wrapper ul .btn:hover, .navbar .nav-wrapper ul .btn-large:hover, #hero .cta:hover, #previous-works .card a.btn-floating:hover, #ote-summary a.download:hover, #footer .btn:hover, #footer .btn-large:hover {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3); }
 
 .hoverable {
@@ -6905,6 +6905,9 @@ body {
   color: #404040;
   -webkit-font-smoothing: antialiased; }
 
+.waves-effect {
+  transition: .15s ease-out; }
+
 .highlight {
   background: rgba(243, 193, 135, 0.5);
   color: rgba(64, 64, 64, 0.9); }
@@ -7126,7 +7129,8 @@ em {
   z-index: 10; }
 
 #navbar-scroll .btn, #navbar-scroll .btn-large {
-  background: linear-gradient(30deg, #ec726a, #f0b067, #66c084, #5da6de); }
+  background: linear-gradient(30deg, #ec726a, #f0b067, #66c084, #5da6de);
+  background: linear-gradient(30deg, #5A6B97, #ED7B73, #F1B570); }
 
 #navbar-scroll nav .brand {
   font-weight: 100;
@@ -7186,11 +7190,14 @@ em {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-size: 90%;
-    font-weight: 500; }
+    font-weight: 500;
+    background: linear-gradient(30deg, #5A6B97, #ED7B73, #F1B570); }
     #hero .cta img {
       max-height: 1.5rem;
       vertical-align: text-bottom;
       margin: 0 0 0 .5rem; }
+    #hero .cta:hover {
+      transform: scale(1.008); }
     #hero .cta ~ a {
       color: #aaa;
       margin: 0 0 0 4.5rem;
@@ -7301,6 +7308,18 @@ em {
 #previous-works .card .card-image img {
   border-radius: 0; }
 
+#previous-works .card a.btn-floating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(30deg, #5A6B97, #ED7B73, #F1B570); }
+  #previous-works .card a.btn-floating:hover {
+    transform: scale(1.05); }
+  #previous-works .card a.btn-floating img {
+    color: white;
+    max-width: 50%;
+    align-self: center; }
+
 #previous-works ul.work-history {
   background: white;
   padding: 0rem;
@@ -7394,6 +7413,32 @@ em {
   @media only screen and (min-width: 601px) {
     #ote-summary {
       padding: 3.5rem; } }
+  #ote-summary a.download {
+    letter-spacing: .1rem;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 90%;
+    font-weight: 500;
+    background: linear-gradient(30deg, #5A6B97, #ED7B73, #F1B570); }
+    #ote-summary a.download:hover {
+      transform: scale(1.008); }
+    @media only screen and (max-width: 600px) {
+      #ote-summary a.download {
+        display: block; } }
+    #ote-summary a.download ~ .alt {
+      letter-spacing: .1rem;
+      font-size: 90%;
+      font-weight: 500;
+      opacity: .5;
+      padding: 0 1rem; }
+      @media only screen and (max-width: 600px) {
+        #ote-summary a.download ~ .alt {
+          display: block;
+          text-align: center;
+          padding: .5rem 1rem; } }
   #ote-summary .h4-row h4, #ote-summary .h4-row .thing {
     display: inline-block; }
   #ote-summary .h4-row .thing {
@@ -7423,33 +7468,6 @@ em {
     color: white; }
     #ote-accomplishment p em {
       color: rgba(255, 255, 255, 0.8); }
-
-#accomplishment-old img {
-  max-height: 4rem;
-  margin-bottom: 1rem; }
-
-#accomplishment-old h4, #accomplishment-old #ote-summary .h4-row .thing, #ote-summary .h4-row #accomplishment-old .thing {
-  color: rgba(0, 0, 0, 0.5); }
-
-#accomplishment-old h4.alt, #accomplishment-old #ote-summary .h4-row .alt.thing, #ote-summary .h4-row #accomplishment-old .alt.thing {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 85%; }
-
-#accomplishment-old .demo-wrapper {
-  min-height: 200px;
-  order: 1; }
-
-#accomplishment-old p {
-  color: rgba(255, 255, 255, 0.9); }
-  #accomplishment-old p em {
-    color: #f9d0cd; }
-
-#accomplishment-old .highlight {
-  color: white;
-  background: #586994;
-  background: #ec9d42;
-  padding: .3rem .3rem; }
 
 #range {
   background: linear-gradient(30deg, #ED7B73, #F1B570, #6DC38A, #65ABE0); }
@@ -7684,13 +7702,28 @@ em {
 #footer {
   background: white;
   text-align: center; }
+  #footer .btn, #footer .btn-large {
+    height: 80px;
+    line-height: 80px;
+    margin: 1.5rem 0;
+    padding: 0 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 90%;
+    font-weight: 500;
+    background: linear-gradient(30deg, #5A6B97, #ED7B73, #F1B570);
+    max-width: 400px;
+    margin: 2rem auto; }
+    #footer .btn:hover, #footer .btn-large:hover {
+      transform: scale(1.02); }
   #footer .col {
     display: flex;
     flex-direction: column; }
   #footer p {
     margin: 0; }
-  #footer .btn, #footer .btn-large {
+  #footer .x-btn {
     background: linear-gradient(30deg, #e43b2f, #ea912a, #42a162, #2a88cf);
+    background: linear-gradient(30deg, #ED7B73, #F1B570, #6DC38A, #65ABE0);
     padding: 3px;
     height: 4rem;
     margin: 2rem 0;
@@ -7699,7 +7732,7 @@ em {
     flex-direction: column;
     border-radius: 99rem;
     align-self: center; }
-    #footer .btn span, #footer .btn-large span {
+    #footer .x-btn span {
       border-radius: 99rem;
       flex: 1;
       display: flex;
