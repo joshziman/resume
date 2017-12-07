@@ -577,18 +577,28 @@ em {
 }
 .section.light {
   //text-align: center;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 2rem 0;
+  }
+
+
   @media #{$small-and-down}{
     h2 img {
       //margin: 2rem auto 0;
       //display: block;
       max-height: 1.9rem;
     }
+
   }
   @media #{$medium-and-up}{
     h2 img {
       max-height: 56px;
     }
     text-align: left;
+
   }
 }
 
@@ -1324,4 +1334,234 @@ em {
   p a {
     color: $base-purple;
   }
+}
+
+
+#letter {
+
+  .section.light p strong {
+    font-weight: 500;
+    color: #333333;
+  }
+
+  #closing {
+    background: white;
+    text-align: center;
+    p {
+      margin-bottom: 2rem;
+    }
+
+    
+    em {
+      color: inherit;
+
+    }
+    a.resume {
+      letter-spacing: .1rem;
+      height: 80px;
+      line-height: 80px;
+      //margin: 1.5rem 0;
+      padding: 0 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: 90%;
+      font-weight: 500;
+      background: linear-gradient(30deg, $base-purple, $base-red, $base-yellow );
+      //@extend .z-depth-2;
+      &:hover {
+        @extend .z-depth-5;
+        transform: scale(1.008);
+      }
+
+      @media #{$small-and-down}{
+        display: block;
+      }
+    }
+  }
+  #section-01 {
+    padding-top: 0;
+  }
+  #contact-line {
+    background: white;
+    .line {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 0;
+      margin-bottom: 0;
+      //opacity: .5;
+      div:first-child {
+        font-weight: 500;
+      }
+      div:not(:first-child) {
+        opacity: .4;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .col-space {
+    margin-bottom: 2rem;
+  }
+
+  em.north-star {
+
+      color: inherit;
+
+  }
+
+  .section {
+    h4 + h2 {
+      margin-top: .5rem;
+    }
+    table {
+      background: white;
+      color: #555555;
+      th,
+      td {
+        padding: 1rem 2rem;
+        border-radius: 0;
+        &:first-child {
+          font-weight: 700;
+        }
+      }
+      th {
+        background: $base-green;
+        color: white;
+      }
+    }
+  }
+
+  table.overview {
+    tr:first-child {
+      background: linear-gradient(30deg, $base-blue, $base-green);
+    }
+    th {
+      background-color: transparent;
+    }
+    td span {
+      display: inline-block;
+      margin: 0 2rem 0 0;
+    }
+    td span:not(.alt)::before {
+      $size: .8rem;
+      background: url("../../../assets/img/check.fw.png") 50% 50%  no-repeat $base-green ;
+      background-size: 80%;
+      height: $size;
+      width: $size;
+      border-radius: 99rem;
+      content: '';
+      display: inline-block;
+      margin: 0 .5rem 0 0;
+      transform: translate(0, .1rem);
+    }
+    td span.alt {
+      opacity: .6;
+    }
+
+  }
+
+
+
+
+
+  #bonus-visual {
+    background: $base-blue;
+    background: linear-gradient(30deg, $base-purple, $base-red );
+
+    text-align: center;
+    h2 {
+      margin-top: 0;
+    }
+    li {
+      font-weight: 500;
+      &::before {
+        content: '';
+        $size: 2rem;
+        height: $size;
+        width: $size;
+        display: block;
+        background: white;
+        border-radius: 99rem;
+        margin: 0 auto;
+        margin-bottom: .5rem;
+        background: url("../../../assets/img/check.png") 50% 50%  no-repeat white ;
+        background-size: 50%;
+      }
+    }
+
+
+
+  }
+  .section.color {
+    background: rgba(black,.1);
+
+    &#hunger {
+      background: $base-yellow;
+    }
+
+    &#alt {
+      background: white;
+      p {
+        color: black;
+      }
+    }
+
+    &#intro {
+      .us {
+        display: flex;
+        flex-direction: row;
+            justify-content: center;
+        .customerio {
+          display: flex;
+        }
+        > div.plus {
+          font-size: 3rem;
+          padding: 0 2rem;
+          opacity: .15;
+          color: black;
+        }
+        > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      img.headshot {
+        max-height: 150px;
+        border: 10px solid rgba(black,.1);
+      }
+      .logo {
+        width: 450px;
+        max-width: 450px;
+        flex-grow: 1;
+      }
+      .emoji {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+
+    &#range,
+    &#intro {
+      background: linear-gradient(30deg, $base-red, $base-yellow, $base-green, $base-blue);
+
+    }
+
+    &#principles {
+      background: $base-purple;
+      background: #473660;
+      background: linear-gradient(30deg, $base-purple, $base-blue );
+      text-align: center;
+    }
+
+
+
+    &#overview {
+      background: $base-purple;
+    }
+  }
+
 }
