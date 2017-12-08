@@ -926,7 +926,12 @@ em {
 
   }
 
-  @media #{$small-and-down}{
+  @media #{$medium-and-down}{
+
+    .x-container {
+      @extend .container;
+    }
+
     $text-width: 200px;
     $text-height: 180px;
     $connector-height: 40px;
@@ -1005,7 +1010,7 @@ em {
 
 
 
-  @media #{$medium-and-up}{
+  @media #{$large-and-up}{
     overflow-x: scroll;
     h4 {
       //color: white;
@@ -1339,6 +1344,15 @@ em {
 
 #letter {
 
+  @media #{$medium-and-down}{
+    .section.light {
+      //padding: 0;
+      //padding: 3rem 0;
+    }
+
+  }
+
+
   .section.light p strong {
     font-weight: 500;
     color: #333333;
@@ -1351,7 +1365,7 @@ em {
       margin-bottom: 2rem;
     }
 
-    
+
     em {
       color: inherit;
 
@@ -1384,16 +1398,30 @@ em {
   #contact-line {
     background: white;
     .line {
-      display: flex;
-      justify-content: space-between;
-      padding: 2rem 0;
+      @media #{$medium-and-down}{
+        padding: 2rem 1rem;
+        .date {
+          margin-top: 1rem;
+        }
+      }
+      @media #{$large-and-up}{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      padding-top: 2rem;
+      padding-bottom: 2rem;
       margin-bottom: 0;
+      line-height: 1.6;
       //opacity: .5;
+      div {
+        //padding: 2rem 0;
+      }
       div:first-child {
         font-weight: 500;
       }
       div:not(:first-child) {
-        opacity: .4;
+        opacity: .65;
         &:hover {
           opacity: 1;
         }
@@ -1433,17 +1461,18 @@ em {
   }
 
   table.overview {
+    margin-bottom: 2rem;
     tr:first-child {
       background: linear-gradient(30deg, $base-blue, $base-green);
     }
     th {
       background-color: transparent;
     }
-    td span {
+    td li {
       display: inline-block;
       margin: 0 2rem 0 0;
     }
-    td span:not(.alt)::before {
+    td li:not(.alt)::before {
       $size: .8rem;
       background: url("../../../assets/img/check.fw.png") 50% 50%  no-repeat $base-green ;
       background-size: 80%;
@@ -1455,8 +1484,45 @@ em {
       margin: 0 .5rem 0 0;
       transform: translate(0, .1rem);
     }
-    td span.alt {
+    td li.alt {
       opacity: .6;
+    }
+    @media #{$small-and-down}{
+
+      border-collapse: separate;
+
+      td ul {
+        margin: 0;
+      }
+      td li {
+          display: block;
+          //margin-left: 1rem;
+          &:not(.xalt)::before {
+            line-height: 2;
+            $size: .75rem;
+            height: $size;
+            width: $size;
+            background: url("../../../assets/img/check.png") 50% 50%  no-repeat ;
+            background-size: 80%;
+
+            //content: '✓'
+          }
+          &.alt {
+            padding: .5rem 0 0;
+          }
+      }
+
+      tr {
+        border-spacing: 1.5rem;
+      }
+      td {
+        display: table-row;
+        padding: 1rem;
+        margin: 1rem;
+        span {
+          display: block;
+        }
+      }
     }
 
   }
@@ -1509,9 +1575,13 @@ em {
 
     &#intro {
       .us {
-        display: flex;
-        flex-direction: row;
-            justify-content: center;
+        @media #{$large-and-up}{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+
+
         .customerio {
           display: flex;
         }
@@ -1520,11 +1590,19 @@ em {
           padding: 0 2rem;
           opacity: .15;
           color: black;
+          text-align: center;
         }
         > div {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          flex-shrink: 0;
+          > * {
+            align-self: center;
+            max-width: 100%;
+
+          }
+
         }
       }
       img.headshot {

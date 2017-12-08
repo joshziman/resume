@@ -7493,7 +7493,7 @@ em {
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: .1rem; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 992px) {
     #range ul {
       padding: 20px; }
       #range ul li {
@@ -7533,7 +7533,7 @@ em {
           width: 55%;
           height: 55%;
           transform: translate(0, 0px); } }
-  @media only screen and (min-width: 601px) {
+  @media only screen and (min-width: 993px) {
     #range {
       overflow-x: scroll;
       padding: 100px 0;
@@ -7787,14 +7787,24 @@ em {
 #letter #contact-line {
   background: white; }
   #letter #contact-line .line {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 0;
-    margin-bottom: 0; }
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    line-height: 1.6; }
+    @media only screen and (max-width: 992px) {
+      #letter #contact-line .line {
+        padding: 2rem 1rem; }
+        #letter #contact-line .line .date {
+          margin-top: 1rem; } }
+    @media only screen and (min-width: 993px) {
+      #letter #contact-line .line {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; } }
     #letter #contact-line .line div:first-child {
       font-weight: 500; }
     #letter #contact-line .line div:not(:first-child) {
-      opacity: .4; }
+      opacity: .65; }
       #letter #contact-line .line div:not(:first-child):hover {
         opacity: 1; }
 
@@ -7821,29 +7831,50 @@ em {
     background: #6DC38A;
     color: white; }
 
-#letter table.overview tr:first-child {
-  background: linear-gradient(30deg, #65ABE0, #6DC38A); }
-
-#letter table.overview th {
-  background-color: transparent; }
-
-#letter table.overview td span {
-  display: inline-block;
-  margin: 0 2rem 0 0; }
-
-#letter table.overview td span:not(.alt)::before {
-  background: url("../../../assets/img/check.fw.png") 50% 50% no-repeat #6DC38A;
-  background-size: 80%;
-  height: 0.8rem;
-  width: 0.8rem;
-  border-radius: 99rem;
-  content: '';
-  display: inline-block;
-  margin: 0 .5rem 0 0;
-  transform: translate(0, 0.1rem); }
-
-#letter table.overview td span.alt {
-  opacity: .6; }
+#letter table.overview {
+  margin-bottom: 2rem; }
+  #letter table.overview tr:first-child {
+    background: linear-gradient(30deg, #65ABE0, #6DC38A); }
+  #letter table.overview th {
+    background-color: transparent; }
+  #letter table.overview td li {
+    display: inline-block;
+    margin: 0 2rem 0 0; }
+  #letter table.overview td li:not(.alt)::before {
+    background: url("../../../assets/img/check.fw.png") 50% 50% no-repeat #6DC38A;
+    background-size: 80%;
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 99rem;
+    content: '';
+    display: inline-block;
+    margin: 0 .5rem 0 0;
+    transform: translate(0, 0.1rem); }
+  #letter table.overview td li.alt {
+    opacity: .6; }
+  @media only screen and (max-width: 600px) {
+    #letter table.overview {
+      border-collapse: separate; }
+      #letter table.overview td ul {
+        margin: 0; }
+      #letter table.overview td li {
+        display: block; }
+        #letter table.overview td li:not(.xalt)::before {
+          line-height: 2;
+          height: 0.75rem;
+          width: 0.75rem;
+          background: url("../../../assets/img/check.png") 50% 50% no-repeat;
+          background-size: 80%; }
+        #letter table.overview td li.alt {
+          padding: .5rem 0 0; }
+      #letter table.overview tr {
+        border-spacing: 1.5rem; }
+      #letter table.overview td {
+        display: table-row;
+        padding: 1rem;
+        margin: 1rem; }
+        #letter table.overview td span {
+          display: block; } }
 
 #letter #bonus-visual {
   background: #65ABE0;
@@ -7873,21 +7904,27 @@ em {
     background: white; }
     #letter .section.color#alt p {
       color: black; }
-  #letter .section.color#intro .us {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    #letter .section.color#intro .us .customerio {
-      display: flex; }
-    #letter .section.color#intro .us > div.plus {
-      font-size: 3rem;
-      padding: 0 2rem;
-      opacity: .15;
-      color: black; }
-    #letter .section.color#intro .us > div {
+  @media only screen and (min-width: 993px) {
+    #letter .section.color#intro .us {
       display: flex;
-      flex-direction: column;
-      justify-content: center; }
+      flex-direction: row;
+      justify-content: center; } }
+  #letter .section.color#intro .us .customerio {
+    display: flex; }
+  #letter .section.color#intro .us > div.plus {
+    font-size: 3rem;
+    padding: 0 2rem;
+    opacity: .15;
+    color: black;
+    text-align: center; }
+  #letter .section.color#intro .us > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0; }
+    #letter .section.color#intro .us > div > * {
+      align-self: center;
+      max-width: 100%; }
   #letter .section.color#intro img.headshot {
     max-height: 150px;
     border: 10px solid rgba(0, 0, 0, 0.1); }
