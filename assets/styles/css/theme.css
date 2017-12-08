@@ -7754,6 +7754,16 @@ em {
   #footer p a {
     color: #5A6B97; }
 
+#letter *:target::before {
+  display: none !important;
+  content: "";
+  visibility: hidden;
+  background: #ED7B73;
+  height: 30px; }
+  @media only screen and (min-width: 601px) {
+    #letter *:target::before {
+      height: 90px; } }
+
 #letter .section.light p strong, #letter .page-footer .section.footer-copyright p strong, .page-footer #letter .section.footer-copyright p strong {
   font-weight: 500;
   color: #333333; }
@@ -7833,6 +7843,11 @@ em {
 
 #letter table.overview {
   margin-bottom: 2rem; }
+  #letter table.overview a {
+    color: inherit; }
+    #letter table.overview a:hover {
+      text-decoration: underline;
+      color: #65ABE0; }
   #letter table.overview tr:first-child {
     background: linear-gradient(30deg, #65ABE0, #6DC38A); }
   #letter table.overview th {
@@ -7843,13 +7858,13 @@ em {
   #letter table.overview td li:not(.alt)::before {
     background: url("../../../assets/img/check.fw.png") 50% 50% no-repeat #6DC38A;
     background-size: 80%;
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 0.75rem;
+    width: 0.75rem;
     border-radius: 99rem;
     content: '';
     display: inline-block;
     margin: 0 .5rem 0 0;
-    transform: translate(0, 0.1rem); }
+    transform: translate(0, 0.05rem); }
   #letter table.overview td li.alt {
     opacity: .6; }
   @media only screen and (max-width: 600px) {

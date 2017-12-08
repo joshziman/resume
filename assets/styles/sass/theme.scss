@@ -929,7 +929,7 @@ em {
   @media #{$medium-and-down}{
 
     .x-container {
-      @extend .container;
+      //@extend .container;
     }
 
     $text-width: 200px;
@@ -1344,6 +1344,19 @@ em {
 
 #letter {
 
+  *:target::before {
+    display: none !important;
+    content: "";
+    visibility: hidden;
+    background: $base-red;
+    height: 30px;
+    @media #{$medium-and-up}{
+      height: 90px;
+    }
+  }
+
+
+
   @media #{$medium-and-down}{
     .section.light {
       //padding: 0;
@@ -1461,6 +1474,13 @@ em {
   }
 
   table.overview {
+    a {
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+        color: $base-blue;
+      }
+    }
     margin-bottom: 2rem;
     tr:first-child {
       background: linear-gradient(30deg, $base-blue, $base-green);
@@ -1473,7 +1493,7 @@ em {
       margin: 0 2rem 0 0;
     }
     td li:not(.alt)::before {
-      $size: .8rem;
+      $size: .75rem;
       background: url("../../../assets/img/check.fw.png") 50% 50%  no-repeat $base-green ;
       background-size: 80%;
       height: $size;
@@ -1482,7 +1502,7 @@ em {
       content: '';
       display: inline-block;
       margin: 0 .5rem 0 0;
-      transform: translate(0, .1rem);
+      transform: translate(0, .05rem);
     }
     td li.alt {
       opacity: .6;
