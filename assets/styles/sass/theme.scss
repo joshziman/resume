@@ -1357,12 +1357,138 @@ em {
 
 
 
+
+
   @media #{$medium-and-down}{
     .section.light {
       //padding: 0;
       //padding: 3rem 0;
     }
 
+  }
+
+  #ty-cta {
+    background: white;
+    text-align: center;
+    p em {
+      color: inherit;
+    }
+    img {
+      max-height: 300px;
+      margin-bottom: 2rem;
+    }
+    img:hover {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+  }
+
+  #product-mission {
+    background: $base-purple;
+    background: linear-gradient(30deg, $base-purple, $base-red, $base-yellow );
+    text-align: center;
+    img {
+      max-height: 4rem;
+    }
+    h3 {
+      font-weight: 600;
+      margin: 2rem 0;
+    }
+  }
+
+  .basic {
+    h3 img {
+      max-height: 3rem;
+      vertical-align: middle;
+    }
+    p em {
+      color: inherit;
+      opacity: .75;
+    }
+    ul, p, blockquote {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      strong {
+        font-weight: 600 !important;
+        color: #444444 !important;
+      }
+    }
+
+    blockquote {
+      font-family: "PT Serif Italic", serif; // TODO: include font family in assets
+      font-style: italic;
+    }
+
+    ul.text {
+      li {
+        list-style-type: disc;
+        margin-left: 1rem;
+        margin-bottom: .5rem;
+        @media #{$medium-and-up}{
+          margin-left: 2rem;
+        }
+
+      }
+      strong {
+        font-weight: 700;
+        color: #444444;
+      }
+    }
+  }
+
+  #process-diagram {
+    background: $base-purple;
+  }
+
+  #points {
+    //background: $base-purple;
+    background: white;
+    text-align: center;
+    h1 img {
+      max-height: 7rem;
+    }
+  }
+  ul.points {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      padding: 2rem 2rem;
+      img {
+        max-width: 3.25rem;
+      }
+      p {
+        max-width: 400px;
+        margin: 0 auto;
+        em {
+          color: inherit;
+          opacity: .7;
+        }
+      }
+    }
+    h3 {
+      color: $base-blue;
+      margin: 1rem 0;
+    }
   }
 
 

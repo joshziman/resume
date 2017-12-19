@@ -7764,6 +7764,97 @@ em {
     #letter *:target::before {
       height: 90px; } }
 
+#letter #ty-cta {
+  background: white;
+  text-align: center; }
+  #letter #ty-cta p em {
+    color: inherit; }
+  #letter #ty-cta img {
+    max-height: 300px;
+    margin-bottom: 2rem; }
+  #letter #ty-cta img:hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px; }
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
+
+#letter #product-mission {
+  background: #5A6B97;
+  background: linear-gradient(30deg, #5A6B97, #ED7B73, #F1B570);
+  text-align: center; }
+  #letter #product-mission img {
+    max-height: 4rem; }
+  #letter #product-mission h3 {
+    font-weight: 600;
+    margin: 2rem 0; }
+
+#letter .basic h3 img {
+  max-height: 3rem;
+  vertical-align: middle; }
+
+#letter .basic p em {
+  color: inherit;
+  opacity: .75; }
+
+#letter .basic ul, #letter .basic p, #letter .basic blockquote {
+  margin-top: 0;
+  margin-bottom: 2rem; }
+  #letter .basic ul strong, #letter .basic p strong, #letter .basic blockquote strong {
+    font-weight: 600 !important;
+    color: #444444 !important; }
+
+#letter .basic blockquote {
+  font-family: "PT Serif Italic", serif;
+  font-style: italic; }
+
+#letter .basic ul.text li {
+  list-style-type: disc;
+  margin-left: 1rem;
+  margin-bottom: .5rem; }
+  @media only screen and (min-width: 601px) {
+    #letter .basic ul.text li {
+      margin-left: 2rem; } }
+
+#letter .basic ul.text strong {
+  font-weight: 700;
+  color: #444444; }
+
+#letter #process-diagram {
+  background: #5A6B97; }
+
+#letter #points {
+  background: white;
+  text-align: center; }
+  #letter #points h1 img {
+    max-height: 7rem; }
+
+#letter ul.points {
+  display: flex;
+  flex-wrap: wrap; }
+  #letter ul.points li {
+    padding: 2rem 2rem; }
+    #letter ul.points li img {
+      max-width: 3.25rem; }
+    #letter ul.points li p {
+      max-width: 400px;
+      margin: 0 auto; }
+      #letter ul.points li p em {
+        color: inherit;
+        opacity: .7; }
+  #letter ul.points h3 {
+    color: #65ABE0;
+    margin: 1rem 0; }
+
 #letter .section.light p strong, #letter .page-footer .section.footer-copyright p strong, .page-footer #letter .section.footer-copyright p strong {
   font-weight: 500;
   color: #333333; }
