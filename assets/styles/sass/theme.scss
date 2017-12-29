@@ -1737,12 +1737,22 @@ em {
           opacity: .15;
           color: black;
           text-align: center;
+
+          // fix alignment bug in firefox
+        	display: flex;
+        	align-items: center;
+
         }
         > div {
-          display: flex;
           flex-direction: column;
           justify-content: center;
           flex-shrink: 0;
+          text-align: center;
+          @media #{$large-and-up} {
+            display: flex;
+            display: -moz-box;
+
+          }
           > * {
             align-self: center;
             max-width: 100%;

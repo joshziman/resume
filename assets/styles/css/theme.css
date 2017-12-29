@@ -8022,12 +8022,18 @@ em {
     padding: 0 2rem;
     opacity: .15;
     color: black;
-    text-align: center; }
-  #letter .section.color#intro .us > div {
+    text-align: center;
     display: flex;
+    align-items: center; }
+  #letter .section.color#intro .us > div {
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+    text-align: center; }
+    @media only screen and (min-width: 993px) {
+      #letter .section.color#intro .us > div {
+        display: flex;
+        display: -moz-box; } }
     #letter .section.color#intro .us > div > * {
       align-self: center;
       max-width: 100%; }
