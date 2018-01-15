@@ -1355,7 +1355,32 @@ em {
     }
   }
 
+  table.principles {
+    tr td:nth-of-type(2){
+      opacity: .7;
+      font-size: 85%;
+      font-style: italic;
+      font-family: "PT Serif Italic", serif;
+    }
+  }
 
+  table.experience {
+    tr.highlight td {
+      background: lighten(rgba($base-yellow,.5),5%);
+      color: rgba(#404040,.9);
+    }
+  }
+
+  ul.tools {
+    span {
+      display: block;
+      opacity: .4;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: 60%;
+      font-weight: 500;
+    }
+  }
 
 
 
@@ -1674,7 +1699,15 @@ em {
   }
 
 
-
+  #design-trends {
+    background: white;
+    text-align: center;
+    img {
+      border-radius: 5px;
+      max-height: 240px;
+      display: block;
+    }
+  }
 
 
   #bonus-visual {
@@ -1769,6 +1802,9 @@ em {
         width: 450px;
         max-width: 450px;
         flex-grow: 1;
+      }
+      .tether-logo {
+        height: 80px;
       }
       .emoji {
         display: flex;

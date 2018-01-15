@@ -7764,6 +7764,24 @@ em {
     #letter *:target::before {
       height: 90px; } }
 
+#letter table.principles tr td:nth-of-type(2) {
+  opacity: .7;
+  font-size: 85%;
+  font-style: italic;
+  font-family: "PT Serif Italic", serif; }
+
+#letter table.experience tr.highlight td {
+  background: rgba(243, 193, 135, 0.5);
+  color: rgba(64, 64, 64, 0.9); }
+
+#letter ul.tools span {
+  display: block;
+  opacity: .4;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 60%;
+  font-weight: 500; }
+
 #letter #ty-cta {
   background: white;
   text-align: center; }
@@ -7982,6 +8000,14 @@ em {
         #letter table.overview td span {
           display: block; } }
 
+#letter #design-trends {
+  background: white;
+  text-align: center; }
+  #letter #design-trends img {
+    border-radius: 5px;
+    max-height: 240px;
+    display: block; }
+
 #letter #bonus-visual {
   background: #65ABE0;
   background: linear-gradient(30deg, #5A6B97, #ED7B73);
@@ -8044,6 +8070,8 @@ em {
     width: 450px;
     max-width: 450px;
     flex-grow: 1; }
+  #letter .section.color#intro .tether-logo {
+    height: 80px; }
   #letter .section.color#intro .emoji {
     display: flex;
     flex-direction: column;
