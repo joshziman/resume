@@ -763,7 +763,7 @@ em {
 
   p.alt {
     font-family: "PT Serif Italic", serif; // TODO: include font family in assets
-    opacity: .7;
+    opacity: .8;
   }
   h4 {
     //font-size: .65rem;
@@ -804,6 +804,14 @@ em {
     @media #{$medium-and-up}{
       padding: 3.5rem;
     }
+
+  .body {
+    max-width: 740px;
+    em {
+      color: inherit;
+    }
+  }
+
 
   a.download {
     letter-spacing: .1rem;
@@ -907,6 +915,8 @@ em {
     color: rgba(white,.85);
     margin-bottom: 0;
     -webkit-font-smoothing: antialiased;
+
+    display: none;
   }
 
   .text {
@@ -1027,6 +1037,8 @@ em {
     $total-height: ($text-height + $connector-height + $dot-height)*2 - $dot-height;
 
     padding: 100px 0;
+    padding: 0;
+
     font-size: 17px;
 
     .line {
@@ -1111,6 +1123,9 @@ em {
           }
           .desc {
             padding: .75em 0;
+
+
+            display: none;
           }
 
         }
