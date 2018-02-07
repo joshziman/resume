@@ -1,0 +1,6 @@
+* {
+    font-family: "Avenir Next", sans-serif !important;
+}
+#cmp-root .cmp-header-rating-average {
+    vertical-align: -3px !important;
+}
